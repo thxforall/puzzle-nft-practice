@@ -13,7 +13,7 @@ function Layout() {
 
     setContract(
       new Contract(
-        "0xE14cBA8725C253dE41b2375aE82D244D1aDCF955",
+        "0xb4E7e1ACDaB54734D129fB12d7b7b653Ac332843",
         MintNFT,
         signer
       )

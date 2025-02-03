@@ -1,6 +1,7 @@
 .deps
 artifacts
 res
+.DS_Store
 
 # Logs
 logs

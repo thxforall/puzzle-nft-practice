@@ -1,11 +1,15 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @layer components {
   .btn-style {
-    @apply bg-blue-300 border-2 border-blue-500 px-4 py-2 text-xl font-semibold rounded-full hover:bg-blue-500;
+    @apply bg-[#8b7355] hover:bg-[#6d5a43] text-white px-6 py-2 rounded-full transition-colors duration-300 font-medium shadow-md;
   }
 
   .link-style {
-    @apply text-lg hover:text-blue-400 hover:underline;
+    @apply text-lg text-[#666666] hover:text-[#8b7355] transition-colors duration-300;
+  }
+
+  .input-style {
+    @apply px-4 py-2 focus:outline-none border-2 border-[#d7c4ad] focus:border-[#8b7355] rounded-lg bg-[#f5efe6] text-[#4a4a4a];
   }
 }
