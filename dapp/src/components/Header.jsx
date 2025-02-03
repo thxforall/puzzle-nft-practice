@@ -1,9 +1,7 @@
 import { ethers } from "ethers";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
-function Header() {
-  const [signer, setSigner] = useState();
-
+function Header({ signer, setSigner }) {
   const onClickMetamask = async () => {
     try {
       if (!window.ethereum) return;
@@ -23,6 +21,14 @@ function Header() {
   return (
     <header className="bg-green-100 flex justify-between items-center px-8 h-20">
       <div className="text-2xl font-semibold">🌏 Earth & Run 🏃‍♀️</div>
+      <div className="flex gap-4">
+        <Link className="link-style" to="/">
+          Home
+        </Link>
+        <Link className="link-style" to="/mint">
+          Mint
+        </Link>
+      </div>
       <div>
         {signer ? (
           <button
@@ -33,10 +39,7 @@ function Header() {
             {signer.address.substring(signer.address.length - 5)}
           </button>
         ) : (
-          <button
-            className="bg-blue-300 border-2 border-blue-500 px-4 py-2 text-xl font-semibold rounded-full hover:bg-blue-500"
-            onClick={onClickMetamask}
-          >
+          <button className="btn-style" onClick={onClickMetamask}>
             🦊 Log In
           </button>
         )}

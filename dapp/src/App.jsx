@@ -1,10 +1,18 @@
-import Header from "./components/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Mint from "./pages/Mint";
+import Layout from "./components/Layout";
 
 function App() {
   return (
-    <div className="bg-red-100 min-h-screen">
-      <Header />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/mint" element={<Mint />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
