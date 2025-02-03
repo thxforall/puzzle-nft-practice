@@ -69,7 +69,7 @@ export default function Home() {
               >
                 <div className="relative w-full h-full">
                   <img
-                    src={`../../public/images/${id}.png`}
+                    src={`/images/${id}.png`}
                     alt={`Playtypus ${id}`}
                     className={`w-full h-full object-cover ${
                       responses[id - 1] === 0 ? 'brightness-40' : ''
